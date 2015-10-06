@@ -17,13 +17,13 @@ keywords:
 
 ## Introduction
 
-## Background
+## Lack Related Work (?)
 
 ## Methods (?)
 
 ## Writing Test Cases (?)
 
-## Results (?)
+## Data Collected (?)
 We aren't actually testing things, but we are collecting data!
 
 ## Future Work

@@ -1,0 +1,20 @@
+sudo: false
+before_script:
+- mkdir /home/travis/bin
+- curl -L https://github.com/yihui/ubuntu-bin/releases/download/latest/pandoc.tar.gz
+  | tar xvz -C /home/travis/bin
+- export PATH="$PATH:/home/travis/bin"
+script: |
+  [ $TRAVIS_BRANCH = master ] &&
+  [ $TRAVIS_PULL_REQUEST = false ] &&
+  make &&
+  pip install --user ghp-import &&
+  ghp-import -n out &&
+  git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+addons:
+  apt:
+    packages:
+    - texlive-full
+env:
+  global:
+    secure: xxx
