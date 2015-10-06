@@ -4,17 +4,24 @@ before_script:
 - curl -L https://github.com/yihui/ubuntu-bin/releases/download/latest/pandoc.tar.gz
   | tar xvz -C /home/travis/bin
 - export PATH="$PATH:/home/travis/bin"
-script: |
-  [ $TRAVIS_BRANCH = master ] &&
+script: ! '[ $TRAVIS_BRANCH = master ] &&
+
   [ $TRAVIS_PULL_REQUEST = false ] &&
+
   make &&
+
   pip install --user ghp-import &&
+
   ghp-import -n out &&
-  git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+
+  git push -fq https://${GH_TOKEN}@github.com/cycomachead/snap-autograder-paper.git
+  gh-pages
+
+'
 addons:
   apt:
     packages:
     - texlive-full
 env:
   global:
-    secure: xxx
+    secure: mL3FaqtLcYAS7Jc/Grs/K2ppo6qM9yE8Dx7XU/JtBCA++UwE/oQ8SD5tf2RilPvYlkjb1WAH62epH9xKT1VVNzl5ccXbjXUkyufVi153jCQXi7NuijgV4bVHQkb0ZneJbcjxIe/60X+QHTdvF61cRUes8YSQV58ZcqUOC4eZyTQQ8qu0/eUasItkAaj5VgUj9UQ1JuDGFQCMey2Eciq+6G6BsO40kLPoY6uueN0tbFbdFNM6K5HQzj3jRJBElF5FMyT0BPTmJnhGOxMmUfG8/sJrdUOtFQHbRafk/JAKvWU7WNHCa+UUZsgMALd2n7HXs7GBmZXElpAXHHSV6CNBVYk+Y89D3inFrmDpgLsmt0aye2mkZMEyc6LsjPFlN2D3gVLXm4742WGGUQCffI19/y0tzpFAMfjtPkarhQnJEE3nYhobpxC+alrVPUg2DNHoDSxVFkifczCuqXDF4cZWt9c15QUBN6RFYN54EEMGqTvIePkTnXwlNTh45jialCUOqoTGoSRfJ9a8HzlC/8bgkrbrwrsC3duoNaroigHo4BL0yzF33YvJfK1z4t86eWGE7h9AGrKD2xcCr6czD9SA13Nbjw5TutbRobM0dCGefeYjUeVFe3irpoNOVa4P36EUXkUzyAzH2grpgYc8otI1ernIwjvhwvH5C/b9KrVaMlQ=
