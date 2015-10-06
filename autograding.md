@@ -14,7 +14,7 @@ keywords:
 ---
 
 ## Abstract:
-
+Snap<i>!</i>, Build Your Own Block is a visual programming language...
 ## Introduction
 
 ## Lack Related Work (?)
@@ -23,7 +23,13 @@ keywords:
 
 ## Writing Test Cases (?)
 
-## Data Collected (?)
+## Data Collected.gitignore
+.travis.yml
+img
+Makefile
+paper.md
+README.md
+templates (?)
 We aren't actually testing things, but we are collecting data!
 
 ## Future Work
