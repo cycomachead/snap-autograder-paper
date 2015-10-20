@@ -3,7 +3,7 @@
 > Meta: Attempting to follow a scholarly markdown format...
 
 ---
-title:
+title: Autograding For a Blocks Langauge
 author:
     -
     -
@@ -12,6 +12,17 @@ date:
 company:
 keywords:
 ---
+
+Notes
+	- Diffing the "world" State
+		- detecting script changes
+	- Ambiguous States or Errors
+		- infinitely looping code
+		- JS Errors
+		- Static analysis
+	- Assertion-Based Testing
+		- following an event log
+		- image diffing
 
 ## Abstract:
 Snap<i>!</i>, Build Your Own Block is a visual programming language...
