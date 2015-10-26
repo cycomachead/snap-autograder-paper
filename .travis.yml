@@ -9,8 +9,9 @@ cache:
 branches:
   only:
   - master
+before_install:
+  - cabal update
 script:
-- cabal update
 - cabal install pandoc
 - cabal install pandoc-citeproc
 - pandoc --version
