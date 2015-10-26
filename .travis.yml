@@ -10,7 +10,7 @@ branches:
   only:
   - master
 script:
-# - cabal update
+- cabal update
 - cabal install pandoc
 - pandoc --version
 - make
