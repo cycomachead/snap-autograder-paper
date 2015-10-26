@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-BRANCH=deploy-pages
-git fetch origin
-git checkout -b ${BRANCH} origin/gh-pages
+REPO=cycomachead/snap-autograder-paper.git
+DEP_BRANCH=deploy-pages
+GH_BRACH=gh-pages
+git fetch origin ${GH_BRANCH}
+git checkout -b ${DEP_BRANCH} FETCH_HEAD
 
 # inside this git repo we'll pretend to be a new user
 git config --global user.name "Michael Ball (TRAVIS-CI)"
@@ -19,7 +21,7 @@ git commit -m "Deploy from Travis CI at: `date` (CI Time)"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force "https://${GH_TOKEN}@github.com/cycomachead/snap-autograder-paper.git" ${BRANCH}:gh-pages > /dev/null 2>&1
+git push -f "https://${GH_TOKEN}@github.com/${REPO}" ${BRANCH}:${GH_BRANCH} > /dev/null 2>&1
 
 # Cleanup...is this necessary?
 git checkout master
