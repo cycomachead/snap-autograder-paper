@@ -2,13 +2,9 @@ sudo: false
 before_script:
 - mkdir /home/travis/bin
 - export PATH="$PATH:/home/travis/bin"
-install:
-  - pip install --user ghp-import
 script:
   - make
-  - ghp-import -n out
-  - git push -f https://${GH_TOKEN}@github.com/cycomachead/snap-autograder-paper.git master:gh-pages
-
+  - deploy.sh
 addons:
   apt:
     packages:

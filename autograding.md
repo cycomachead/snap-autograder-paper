@@ -25,7 +25,8 @@ Notes
 		- image diffing
 
 ## Abstract:
-Snap<i>!</i>, Build Your Own Block is a visual programming language...
+In this paper, we present the design and use of an in-browser autograder for a visual programming language, Snap<i>!</i> [REF].
+Snap<i>!</i>, Build Your Own Block is a web-based, blocks-based language inspired by Scratch [REF], for the course _The Beauty and Joy of Computing_[REF], at UC Berkeley. Before planning to build a MOOC of BJC we needed a way of evaluating student work that didn't involve human grading. 
 ## Introduction
 
 ## Lack Related Work (?)
