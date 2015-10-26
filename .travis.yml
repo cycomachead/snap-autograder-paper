@@ -12,6 +12,7 @@ branches:
 script:
 - cabal update
 - cabal install pandoc
+- cabal install pandoc-citeproc
 - pandoc --version
 - make
 - deploy.sh
