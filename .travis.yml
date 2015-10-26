@@ -15,7 +15,7 @@ script:
 - cabal install pandoc-citeproc
 - pandoc --version
 - make
-- deploy.sh
+- ./deploy.sh
 addons:
   apt:
     packages:
