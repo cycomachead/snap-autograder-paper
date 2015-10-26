@@ -1,12 +1,16 @@
 sudo: false
 before_script:
 - mkdir /home/travis/bin
-- export PATH="$PATH:/home/travis/bin"
+- export PATH="$PATH:/home/travis/bin:$HOME/.cabal/bin"
+cache:
+  directories:
+    - $HOME/.cabal/
+    - $HOME/.cabal/lib/
 branches:
   only:
   - master
 script:
-- cabal update
+# - cabal update
 - cabal install pandoc
 - pandoc --version
 - make

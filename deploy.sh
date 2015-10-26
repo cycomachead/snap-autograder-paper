@@ -4,11 +4,8 @@ set -e # exit with nonzero exit code if anything fails
 #clear any directories that build scripts create
 rm -rf dist || exit 0
 
-#build scripts
-./build.sh
-
-#got to build directory and init a new repo
-cd dist
+# go to build directory and init a new repo
+cd output
 git init
 
 # inside this git repo we'll pretend to be a new user
