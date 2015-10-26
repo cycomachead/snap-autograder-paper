@@ -25,4 +25,4 @@ git push -f "https://${GH_TOKEN}@github.com/${REPO}" ${BRANCH}:${GH_BRANCH} > /d
 
 # Cleanup...is this necessary?
 git checkout master
-git branch -D ${BRANCH}
+git branch -D ${DEP_BRANCH}
