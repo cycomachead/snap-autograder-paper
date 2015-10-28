@@ -8,6 +8,6 @@ Current Paper status:
 :confounded:
 :worried:
 
-Deadlines: Oh :poop:
-L@S 2015: Oct 18
-SIGCSE Poster: Oct 23
+Deadlines: Oh :poop: :fire: :poop:
+L@S 2015: Oct 31
+SIGCSE Poster: Oct 23 [Submitted!]

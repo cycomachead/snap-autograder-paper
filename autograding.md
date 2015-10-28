@@ -1,7 +1,7 @@
 ---
 title: Autograding For a Blocks Langauge
 abstract: |
-    Abstract coming soon....
+    This work describes an environment for autograding a visual programming langage, Snap! and it's use in MOOCs. We present our design approach, as well as
 author:
     - name: Michael Ball
       email: michael.ball@berkeley.edu
@@ -46,23 +46,26 @@ Notes
 		- following an event log
 		- image diffing
 
-# Abstract:
+# FIXME
 In this paper, we present the design and use of an in-browser autograder for a visual programming language, Snap<i>!</i> [REF].
 Snap<i>!</i>, Build Your Own Block is a web-based, blocks-based language inspired by Scratch [REF], for the course _The Beauty and Joy of Computing_[REF], at UC Berkeley. Before planning to build a MOOC of BJC we needed a way of evaluating student work that didn't involve human grading. We designed the autograder system that we could have a wide set of unit tests as well as more general assertion tests based on static analysis or output logs. This fall, we successfully deployed our autograder to edX, and piloted it UC Berkeley. We are planning to build out the tools to make them easier for others to use.
 
 # Introduction
 
+# Background
+
 # Lack Related Work (?)
 
 # System Overview (?)
 
-# Methods (?)
+# Features
 
-# Writing Test Cases (?)
-
-# Data Collection
-
+## Data Collection
 We aren't actually testing things, but we are collecting data!
+
+## Adaptability
+
+# Implementing The Tools
 
 # Future Work
 
